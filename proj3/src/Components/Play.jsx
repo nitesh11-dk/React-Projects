@@ -46,13 +46,12 @@ const Play = ({
       <p className="text-xl text-center  font-semibold pb-2">
         Click on dice to Roll
       </p>
-      <Button
+      <button
         onClick={reset}
         className={
-          "text-black border-red-600 border  w-36 font-semibold text-xl active:bg-obsidian active:text-snow duration-[0.5s] ease-in-out "
+          " text-black py-1 rounded-xl border-red-600 border  w-36 font-semibold text-xl active:bg-obsidian active:text-snow duration-[0.2s] ease-in-out "
         }
-        content={"Reset"}
-      ></Button>
+      > Reset</button>
       <Button
         className={"text-snow bg-obsidian w-36 font-semibold text-md"}
         content={"Show Rules"}
