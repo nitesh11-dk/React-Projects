@@ -54,3 +54,11 @@ console.log(data)
 // const {search , pathname} =  useLocation(); // you will get what ever written after ? with ? 
 // let category = decodeURIComponent(search.split("=")[1]);
 // console.log(category)
+
+
+
+//  uuid and also  nanoid
+
+
+//  to set data in local storage
+localStorage.setItem('products', JSON.stringify([...products, product]));

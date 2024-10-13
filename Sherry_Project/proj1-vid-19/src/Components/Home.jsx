@@ -11,18 +11,12 @@ let [filteredProducts ,setFilteredProducts] =useState(null)
   const {search} =  useLocation(); // you will get what ever written after ? with ? 
   let category = decodeURIComponent(search.split("=")[1]);
 
-let getCaterogyPRoduct = async ()=>{
-try {
-  let data = await axiosInstance.get(`/products/category/${category}`)
-  setFilteredProducts(data.data);
-} catch (error) {
-console.log(error)  
-}
-}
+
 
 useEffect(() => {
   if (category != "undefined") {
-    getCaterogyPRoduct();
+    setFilteredProducts(products.filter(product => product.category == category));
+   
   } else {
     setFilteredProducts(products);
   }

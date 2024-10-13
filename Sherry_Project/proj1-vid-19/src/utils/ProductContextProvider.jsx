@@ -5,20 +5,8 @@ export const ProductContext = createContext();
 
 const ProductContextProvider = (props) => {
 
-const [products ,setProducts] =useState([]);
+const [products ,setProducts] =useState(JSON.parse(localStorage.getItem('products')) || []);
 
-const getProducts = async()=>{
-try {
-  let product = await axiosInstance.get("/products");
-  setProducts(product.data)
-} catch (error) {
-  console.log(error)
-}
-}
-
-useEffect(()=>{
-  getProducts();
-},[])
 
   return (
       <ProductContext.Provider value={{products ,setProducts}} >

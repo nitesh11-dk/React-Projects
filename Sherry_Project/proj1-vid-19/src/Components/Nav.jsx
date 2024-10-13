@@ -9,14 +9,16 @@ const Nav = () => {
   
   let uniqueCategories = [...new Set(products.map(product => product.category))];
 
-  
+  console.log(uniqueCategories)
   const icons = ['🟢', '🟣', '🔴', '🟢'];
 
   return (
     <div className='w-1/6 min-h-screen bg-gradient-to-b from-blue-700 to-blue-900 text-white p-5'>
-      <button className='w-full mb-6 py-3 text-lg font-semibold bg-yellow-400 text-gray-900 rounded-lg hover:bg-yellow-300'>
-        Add New Button
+    <Link to={"/create"}>
+    <button className='w-full mb-6 py-3 text-lg font-semibold bg-yellow-400 text-gray-900 rounded-lg hover:bg-yellow-300'>
+        Add New Product
       </button>
+    </Link>
     <hr className='my-6 border-t-2 border-white' />
     
     <h2 className='text-xl font-bold mb-4'>Category Filter</h2>
