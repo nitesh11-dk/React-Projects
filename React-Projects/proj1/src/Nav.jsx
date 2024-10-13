@@ -2,7 +2,7 @@ import React from 'react'
 import Btn from './Components/Button'
 const Nav = () => {
   return (
-    <div className='font-montserrat w-full  items-center h-full flex py-3 justify-between gap-3  text-[#2E2E2E]'>
+    <div className='font-montserrat w-full mx-auto md:w-[80%] items-center h-full flex py-3 justify-between gap-3  text-[#2E2E2E]'>
 <img src="/brand_logo.png" className='h-8 w-20 md:w-24 md:h-12' alt="" />
       <div className=' gap-2 hidden md:flex md:gap-4'>
       {

@@ -4,7 +4,9 @@ import Btn from "./Components/Button";
 function App() {
   return (
     <>
-      <div className=" p-2 min-h-screen w-screen bg-white md:p-4">
+      <div className=" p-2 min-h-screen w-screen  bg-white md:p-4">
+
+
         <Nav></Nav>
         <div className="py-8 md:py-28 md:flex md:items-center md:justify-center">
 <div className="content md:w-1/3">
