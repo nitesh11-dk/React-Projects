@@ -31,6 +31,9 @@ let deleteProduct = ()=>{
 
   return product ? (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
+       <Link to={'/'} className='absolute top-2 left-2   mb-2 py-1 px-2 text-lg font-semibold bg-blue-400 text-gray-900 rounded-lg hover:bg-blue-300'>
+        Home
+      </Link>
       <div className="relative flex bg-white shadow-2xl rounded-lg max-w-4xl">
         <div className="absolute top-2 flex justify-center items-center left-1/2 -translate-x-1/2 bg-red-600 text-white text-md font-medium px-3 py-1 rounded-lg">
           {product.category}

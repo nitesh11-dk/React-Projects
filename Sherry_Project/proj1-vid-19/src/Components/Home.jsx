@@ -40,7 +40,7 @@ useEffect(() => {
       <h1 className='text-3xl font-bold text-center mb-8'>Product Showcase</h1>
       <div className='flex flex-wrap justify-center gap-8'>
         { filteredProducts && filteredProducts.map((product, i) => (
-          <Link to={`/details/${product.id}`} key={i} className='w-56 h-72 p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300'>
+          <Link to={`/details/${product.id}`} key={i} className='w-56 h-76 p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition duration-300'>
             <img
               className='rounded-lg h-48 w-full object-contain mb-4'
               src={product.image}
