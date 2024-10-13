@@ -62,3 +62,19 @@ console.log(data)
 
 //  to set data in local storage
 localStorage.setItem('products', JSON.stringify([...products, product]));
+// to get data 
+// JSON.parse(localStorage.getItem('products')
+//  by deafult local storage ko js ka objext nahi chhaiye hota hai like js ka  objec t json format me nahi hata hai so  we use json stringify to convert it into json format
+
+
+
+
+
+// handle change of input 
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prev) => ({
+    ...prev,
+    [name]: value,
+  }));
+};

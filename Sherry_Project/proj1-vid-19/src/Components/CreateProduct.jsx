@@ -8,13 +8,14 @@ const CreateProductForm = ({ onCreate }) => {
 
 
     let {products ,setProducts} = useContext(ProductContext);
+    
   const categories = [
     "men's clothing",
     'jewelery',
     'electronics',
     "women's clothing",
   ];
-// console.log(products)
+
   
   const [formData, setFormData] = useState({
     id: '',
