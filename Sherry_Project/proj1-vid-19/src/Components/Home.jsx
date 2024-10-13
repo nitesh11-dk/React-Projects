@@ -3,7 +3,7 @@ import Nav from './Nav'
 import { Link, useLocation } from 'react-router-dom';
 import { ProductContext } from '../utils/ProductContextProvider';
 import Shimmer from './productSimerUi';
-import { axiosInstance } from '../utils/axiosInstance';
+
 const Home = () => {
   let {products} = useContext(ProductContext);
 let [filteredProducts ,setFilteredProducts] =useState(null)

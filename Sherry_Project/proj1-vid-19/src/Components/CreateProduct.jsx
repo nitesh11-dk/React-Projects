@@ -2,6 +2,7 @@ import React, { useState , useContext } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { ProductContext } from '../utils/ProductContextProvider';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const CreateProductForm = ({ onCreate }) => {
   const Navigate = useNavigate();
 
@@ -53,6 +54,7 @@ const CreateProductForm = ({ onCreate }) => {
     setProducts([...products, product]);
     localStorage.setItem('products', JSON.stringify([...products, product]));
     Navigate('/')
+    toast.success('Product Created');
   };
 
   return (

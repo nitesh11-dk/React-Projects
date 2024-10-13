@@ -4,6 +4,7 @@ import ProductShimmer from './ProductShimmer';
 import { ProductContext } from '../utils/ProductContextProvider';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 const ProductDetail = () => {
   let { products ,setProducts } = useContext(ProductContext);
   const [product, setProduct] = useState(null);
@@ -23,6 +24,7 @@ let deleteProduct = ()=>{
   setProducts(newProducts);
   localStorage.setItem('products', JSON.stringify(newProducts));
   Navigate('/');
+  toast.success('Product Deleted');
 
 }
 
