@@ -78,3 +78,16 @@ const handleChange = (e) => {
     [name]: value,
   }));
 };
+
+
+<div className='mb-4'>
+<label className='block text-sm font-medium mb-2'>Title</label>
+<input
+  type='text'
+  name='title'
+  value={formData.title}
+  onChange={handleChange}
+  required
+  className='w-full p-2 border rounded'
+/>
+</div>
