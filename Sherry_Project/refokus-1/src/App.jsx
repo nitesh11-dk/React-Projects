@@ -5,6 +5,7 @@ import Stripes from './Components/Stripes';
 import Products from './Components/Products';
 import Marquees from './Components/Marquees';
 import Cards from './Components/Cards';
+import Fotter from './Components/Fotter';
 function App() {
   return (
     <>
@@ -15,6 +16,7 @@ function App() {
 <Products></Products>
 <Marquees></Marquees>
 <Cards></Cards>
+<Fotter></Fotter>
     </div>
     </>
   );
