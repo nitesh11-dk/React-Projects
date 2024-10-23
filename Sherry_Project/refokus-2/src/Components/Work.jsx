@@ -14,10 +14,10 @@ const Work = () => {
 ])
 
   const {scrollYProgress } = useScroll();
+  //  M-1 
   // scrollYProgress ye 0 se 1 value deta hai 
   // scrollYProgress.on("change", (latest) => {
   //   const y = Math.floor(latest * 100);
-  
   //   setImages((prev) =>
   //     prev.map((img, index) => ({
   //       ...img,
@@ -25,7 +25,38 @@ const Work = () => {
   //     }))
   //   );
   // });
-   
+
+  // feature 
+  function imagesShow(arr){
+    setImages(prev =>(
+      prev.map((img, index) => ((
+        arr.indexOf(index) !== -1 ? {...img , isActive : true} : {...img , isActive : false}
+         
+      )))
+
+    ))
+  }
+  scrollYProgress.on("change", (latest) => {
+    const y = Math.floor(latest * 100);
+    switch (y) {
+      case 0:
+        imagesShow([])
+        break;
+        case 2:
+          imagesShow([0])
+          break; 
+          case 4:
+            imagesShow([0,1])
+            break;
+            case 6:
+              imagesShow([0,1,2])
+        break;
+    }
+  });
+  
+
+
+
     
   return (
     <div className=' relative max-w-screen-xl mx-auto text-center w-full  mt-28 mb-10' >
