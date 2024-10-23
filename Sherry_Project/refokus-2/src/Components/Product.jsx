@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from './Button'
 
-const Product = ({data}) => {
+const Product = ({data ,count  ,changeYpos}) => {
   return (
-    <div className='w-full flex flex-row items-center justify-between py-20 px-40 '>
+    <div onMouseEnter={()=>{changeYpos(count)}} className='w-full flex flex-row items-center justify-between py-20 px-28 '>
       <h2 className='text-7xl capitalize '>{data.title}</h2>
       <div className='w-1/3 '>
         <p className='text-md tracking-wide   '>{data.content}</p>

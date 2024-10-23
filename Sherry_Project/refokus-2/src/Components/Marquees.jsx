@@ -44,11 +44,11 @@ const Marquees = () => {
 
 
   return (
-    <div className='py-20
+    <div className='py-20 mt-32 w-full relative overflow-hidden
     '>
       {
         data.map((item,index)=>{
-          return <Marque key={index} item={item} />
+          return <Marque key={index} item={item} direction={index == 0 ? "left" : "right"} />
         })
       }
     </div>
