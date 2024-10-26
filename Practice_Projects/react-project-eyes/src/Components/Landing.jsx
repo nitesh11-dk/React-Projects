@@ -15,14 +15,14 @@ const Landing = () => {
             </div>
         ))}
       </div>
-      
+
 <div className='border-t-[1px] border-zinc-600 mt-36  px-20 w-full flex justify-between items-center py-3 text-[1.2vw]  '>
 {
     ["For public and private companies","From the first pitch to IPO"].map((elem)=>(
         <h2>{elem}</h2>
     ))
 }
-<div className='flex gap-4 items-center justify-center'>
+<div className='flex gap-6 items-center justify-center'>
     <button className='px-4 py-1 rounded-3xl border-[1px] border-zinc-100'>START THE PROJECT</button>
     <div className="border-[1px] border-zinc-100 p-2 rounded-full">
     <LuArrowUpRight  />
