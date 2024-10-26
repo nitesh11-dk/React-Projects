@@ -22,7 +22,7 @@ const Landing = () => {
         <h2>{elem}</h2>
     ))
 }
-<div className='flex gap-6 items-center justify-center'>
+<div className='flex gap-4 items-center justify-center'>
     <button className='px-4 py-1 rounded-3xl border-[1px] border-zinc-100'>START THE PROJECT</button>
     <div className="border-[1px] border-zinc-100 p-2 rounded-full">
     <LuArrowUpRight  />
