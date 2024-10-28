@@ -70,9 +70,6 @@ let deleteProduct = ()=>{
           )}
 
           <div className="flex space-x-4">
-            <button className="mt-4 bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-500 transition duration-300">
-              Add to Cart
-            </button>
 
             {/* Edit Button */}
             <Link to={'/edit/' + id}>
