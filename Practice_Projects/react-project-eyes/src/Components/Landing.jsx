@@ -1,15 +1,17 @@
+import { motion } from "framer-motion";
 import { LuArrowUpRight } from "react-icons/lu";
 
 const Landing = () => {
+  
   return (
-    <div className='     mt-24 opacity-90'>
+    <div data-scroll data-scroll-speed='-0.3' className='     mt-24 opacity-90'>
       <div className=' px-20 structuredText   '>
         {["We Create","Eye Opening","Presentations"].map((elem, index)=>(
             <div className='masker flex items-center'>
        {
-           index ===1 && <div className='w-[10.5vw] h-[6.8vw] mt-3 bg-green-500 rounded-lg'>
+           index ===1 && <motion.img initial={{width:0}} animate={{width:"10.5vw"}} transition={{duration:0.6 ,ease:[0.25, 1, 0.5, 1]}} src="https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png" className='w-[10.5vw] bg-center h-[6.8vw] mt-3 bg-green-500 rounded-lg'>
             
-           </div>
+           </motion.img>
        }
                   <h1 className='text-[8vw] tracking-tight uppercase font-bold  leading-[7.5vw]'>{elem}</h1>
             </div>
