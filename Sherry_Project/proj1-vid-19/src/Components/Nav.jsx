@@ -24,7 +24,7 @@ const Nav = () => {
      
       <Link to={"/cart"}>
         <button className='w-full mb-6 py-3 text-lg font-semibold relative bg-green-400 text-gray-900 rounded-lg hover:bg-green-300'>
-          Go to Cart <div className='w-4 h-4 p-4 absolute -top-1 -right-1  rounded-full  flex items-center justify-center bg-zinc-300 text-black'> {cartCount > 0 ? `${cartCount}` : '❓'}</div>
+          Go to Cart <div className='w-4 h-4 p-4 absolute -top-1 -right-1  rounded-full  flex items-center justify-center bg-zinc-300 text-black'> {cartCount > 0 ? `${cartCount}` : '🛒'}</div>
         </button>
       </Link>
 
