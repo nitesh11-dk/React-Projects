@@ -247,25 +247,25 @@ const defaultProducts =[
 
 export const ProductContext = createContext();
 
-const ProductContextProvider = (props) => {
-  const [products, setProducts] = useState(() => {
-    const savedProducts = localStorage.getItem('products');
-    if (savedProducts) {
-      return JSON.parse(savedProducts);
-    } else {
-      localStorage.setItem('products', JSON.stringify(defaultProducts));
-      return defaultProducts;
-    }
-  });
+const ProductContextProvider = ({ children }) => {
+  const [products, setProducts] = useState(defaultProducts);
+  const [cart, setCart] = useState([]);
 
-  // Sync state with localStorage whenever products change
-  useEffect(() => {
-    localStorage.setItem('products', JSON.stringify(products));
-  }, [products]);
+  const addToCart = (product) => {
+    setCart((prev) => [...prev, product]);
+  };
+
+  const removeFromCart = (productId) => {
+    setCart((prev) => prev.filter((product) => product.id !== productId));
+  };
+
+  const isProductInCart = (productId) => {
+    return cart.some((product) => product.id === productId);
+  };
 
   return (
-    <ProductContext.Provider value={{ products, setProducts }}>
-      {props.children}
+    <ProductContext.Provider value={{ products, setProducts, cart, addToCart, removeFromCart, isProductInCart }}>
+      {children}
     </ProductContext.Provider>
   );
 };
