@@ -22,7 +22,7 @@ function handleHover(elem){
     <div className='py-12 '>
       <h1 className='text-5xl px-16 font-sm'>Featured projects</h1>
       <div className='w-full  border-t-[1px] flex gap-5 px-10 py-10  border-zinc-500 mt-10'>
-     <motion.div onHoverStart={()=>{handleHover(0)}} onHoverEnd={()=>{handleHoverEnd(0)}}  className=' relative w-1/2 hover:z-50  hover:scale-[0.95] duration-300 ease-in-out h-full '>
+     <motion.div  onHoverStart={()=>{handleHover(0)}} onHoverEnd={()=>{handleHoverEnd(0)}}  className=' relative w-1/2 hover:z-50  hover:scale-[0.95] duration-300 ease-in-out h-full '>
      <div className='w-full h-full   overflow-hidden rounded-xl'>
         <img className='h-full w-full ' src="https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png" alt="" />
       </div>
