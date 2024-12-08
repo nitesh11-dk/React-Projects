@@ -61,9 +61,9 @@ const Project = () => {
     
     <div className="circle pointer-events-none -translate-x-1/2 -translate-y-1/2 z-10 w-4 absolute   h-4 bg-red-400 rounded-full flex justify-center items-center text-sm"></div>
 
-    <div className=" opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-10 text-white absolute">Discover</div>
+    <div className=" opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-10 text-wh absolute">Discover</div>
 
-G
+
     <div ref={div} className=' overflow-hidden relative w-screen h-screen bg-base-300 flex justify-center items-center'
     >
     
@@ -75,7 +75,7 @@ G
             setscaleFollower(1);
             setOpacity(0);
    }}>
-   <img src="https://atelierdesign.be/wp-content/uploads/2024/06/Brochure_Cover_on_Red_Background-1-1366x909.jpg" alt="" />
+   <img className='object-center' src="https://atelierdesign.be/wp-content/uploads/2024/06/Brochure_Cover_on_Red_Background-1-1366x909.jpg" alt="" />
     
    </div>
     </div>
