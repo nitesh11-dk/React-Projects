@@ -9,6 +9,8 @@ const Project = () => {
   let [y,setY] = useState(0);
 
   let  [scale,setScale] = useState(1);
+  let  [scaleFollower,setscaleFollower] = useState(1);
+  let  [opacity,setOpacity] = useState(0);
 
 
   useGSAP(()=>{
@@ -18,31 +20,50 @@ const Project = () => {
     })
   },[x,y]);
 
+
+
   useGSAP(()=>{
     gsap.to(container.current, {
           scale: scale,
           duration: 0.5,
           ease: "power1.out"});
-  },[scale]);
+
+          gsap.to(".circle", {
+            scale:scaleFollower,
+ scaleFollower: "power1.out"});
+  },[scaleFollower,scale]);
+
 
   useEffect(()=>{
       div.current.addEventListener("mousemove", (e) => {
         setX(e.clientX);
         setY(e.clientY);
       })
-   
       container.current.addEventListener("mouseenter", () => {
         setScale(0.9);  
+        setscaleFollower(4);
+        setOpacity(1);
       });
-  
   },[])
 
+  useGSAP(()=>{
+
+    gsap.to(".opacity-0",{ 
+      x:x,
+      y:y,
+      opacity:opacity,  
+    })
+  },[opacity,x,y])
  
   
   return (
     <>
     
-    <div className="circle pointer-events-none -translate-x-1/2 -translate-y-1/2 z-10 w-4 absolute   h-4 bg-red-400 rounded-full"></div>
+    <div className="circle pointer-events-none -translate-x-1/2 -translate-y-1/2 z-10 w-4 absolute   h-4 bg-red-400 rounded-full flex justify-center items-center text-sm"></div>
+
+    <div className=" opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-10 text-white absolute">Discover</div>
+
+G
     <div ref={div} className=' overflow-hidden relative w-screen h-screen bg-base-300 flex justify-center items-center'
     >
     
@@ -50,7 +71,10 @@ const Project = () => {
 
     <div className="right w-2/3 h-full  flex justify-center items-center">
    
-   <div ref={container} onMouseLeave={()=>{ setScale(1);}}>
+   <div ref={container} onMouseLeave={()=>{ setScale(1);
+            setscaleFollower(1);
+            setOpacity(0);
+   }}>
    <img src="https://atelierdesign.be/wp-content/uploads/2024/06/Brochure_Cover_on_Red_Background-1-1366x909.jpg" alt="" />
     
    </div>
