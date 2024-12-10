@@ -95,3 +95,5 @@ const Project = () => {
 }
 
 export default Project
+
+// in this i  have how to use gsap with react with proper formattinng 
