@@ -21,7 +21,6 @@ const Project = () => {
   },[x,y]);
 
 
-
   useGSAP(()=>{
     gsap.to(container.current, {
           scale: scale,
