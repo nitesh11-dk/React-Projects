@@ -20,6 +20,7 @@ const Canvas = ({details}) => {
     }
   }) 
 
+
   })
 
   useEffect(() => {
