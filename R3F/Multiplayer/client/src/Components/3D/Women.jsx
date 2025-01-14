@@ -25,7 +25,7 @@ export function Women({
     actions[animation].reset().fadeIn(0.3).play();
 
     return () => {
-      actions[animation].fadeOut(0.3);
+      actions[animation]?.fadeOut(0.3);
     };
   }, [animation]);
 
