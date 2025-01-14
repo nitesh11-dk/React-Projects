@@ -6,7 +6,7 @@ const App = () => {
     <div className="w-screen h-screen">
       <Canvas
         camera={{
-          position: [3, 3, 3],
+          position: [8, 8, 8],
           fov: 30,
         }}
       >
