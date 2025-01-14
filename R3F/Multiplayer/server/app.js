@@ -36,6 +36,11 @@ characters.push({
 socket.emit("message","hello world");  
 io.emit("characters",characters); 
 
+socket.on("move", (position) => {
+  let character = characters.find((c) => c.id === socket.id);
+  character.position = position;  
+  io.emit("characters",characters);
+})
 
 socket.on("disconnect", () => {
     console.log("user disconnected");
