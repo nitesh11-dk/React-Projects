@@ -34,6 +34,7 @@ characters.push({
 })
 
 socket.emit("message","hello world");  
+
 io.emit("characters",characters); 
 
 socket.on("move", (position) => {
